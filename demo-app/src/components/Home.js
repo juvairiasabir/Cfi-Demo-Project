@@ -18,8 +18,6 @@ const Home = () => {
         password: ""
     })
 
-   
-
     const [data,setData] = useState([]);
     console.log(inpval);
 
@@ -107,7 +105,7 @@ const Home = () => {
                                 Submit
                             </Button>
                         </Form>
-                        <p className='mt-3'>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
+                        <p className='mt-3'>Already Have an Account? <span><NavLink to="/login">SignIn</NavLink></span> </p>
                     </div>
                     <SIgn_img />
                 </section>

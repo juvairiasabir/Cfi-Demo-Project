@@ -7,15 +7,17 @@ import { NavLink } from 'react-router-dom'
 const Header = () => {
     return (
         <>
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                    <NavLink to="/" className="text-decoration-none text-light mx-2">User Registration</NavLink>
-                    <Nav className="me-auto">
-                        <NavLink to="/" className="text-decoration-none text-light mx-2">Home</NavLink>
-                        <NavLink to="/" className="text-decoration-none text-light">Features</NavLink>
-                    </Nav>
-                </Container>
-            </Navbar>
+            <Navbar className='navbaar' bg="primary" variant="dark">
+        <Container className='container-nav'>
+          <Navbar.Brand href="#home">Code for India</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#aboutus">About Us</Nav.Link>
+            <Nav.Link href="#contactus">Contact Us</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+
         </>
     )
 }

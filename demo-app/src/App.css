@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.me-auto{
+  margin-left: 55vw;
+  
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

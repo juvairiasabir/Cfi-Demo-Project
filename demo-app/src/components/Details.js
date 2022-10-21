@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
-import { useNavigate } from 'react-router-dom'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+// import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 
 const Details = () => {
 
@@ -26,16 +30,16 @@ const Details = () => {
             setLoginData(user);
 
 
-            const userbirth = logindata.map((el, k) => {
-                return el.date === todayDate
-            });
+            // const userbirth = logindata.map((el, k) => {
+            //     return el.date === todayDate
+            // });
 
-            if (userbirth) {
-                setTimeout(() => {
-                    console.log("ok");
-                    handleShow();
-                }, 3000)
-            }
+            // if (userbirth) {
+            //     setTimeout(() => {
+            //         console.log("ok");
+            //         handleShow();
+            //     }, 3000)
+            // }
         }
     }
 
@@ -53,11 +57,101 @@ const Details = () => {
             {
                 logindata.length === 0 ? "errror" :
                     <>
-                        <h1>detials page</h1>
-                        <h1>{logindata[0].name}</h1>
-                        <Button onClick={userlogout}>LogOut</Button>
+                        <h1>Please Proceed with the Application Form and book your Slot For interview</h1>
 
-                {
+
+{/* function HorizontalExample() {
+  return ( */}
+    <Form>
+      <Form.Group as={Row} className="mb-3 col-lg-6" controlId="formHorizontalEmail">
+        <Form.Label column sm={2}>
+          Email
+        </Form.Label>
+        <Col sm={10}>
+          <Form.Control type="email" placeholder="Email" />
+        </Col>
+      </Form.Group>
+
+      <Form.Group as={Row} className="mb-3 col-lg-6" controlId="formHorizontalEmail">
+        <Form.Label column sm={2}>
+          name
+        </Form.Label>
+        <Col sm={10}>
+          <Form.Control type="name" placeholder="Name" />
+        </Col>
+      </Form.Group>
+
+      <Form.Group as={Row} className="mb-3 col-lg-6" controlId="formHorizontalEmail">
+        <Form.Label column sm={2}>
+          Phone Number
+        </Form.Label>
+        <Col sm={10}>
+          <Form.Control type="number" placeholder="Number" />
+        </Col>
+      </Form.Group>
+
+      <Form.Group as={Row} className="mb-3 col-lg-6" controlId="formHorizontalEmail">
+        <Form.Label column sm={2}>
+          College name
+        </Form.Label>
+        <Col sm={10}>
+          <Form.Control type="name" placeholder="College Name" />
+        </Col>
+      </Form.Group>
+
+      <fieldset>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label as="legend" column sm={2}>
+          Please select your current year at college
+          </Form.Label>
+          <Col sm={10}>
+            <Form.Check
+              type="year"
+              label="First Year"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios1"
+            />
+            <Form.Check
+              type="year"
+              label="Second Year"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+            <Form.Check
+              type="year"
+              label="Third Year"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios3"
+            />
+            <Form.Check
+              type="year"
+              label="Fourth Year"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios1"
+            />
+          </Col>
+        </Form.Group>
+      </fieldset>
+      {/* <Form.Group as={Row} className="mb-3 col-lg-6" controlId="formHorizontalCheck">
+        <Col sm={{ span: 10, offset: 2 }}>
+          <Form.Check label="Remember me" />
+        </Col>
+      </Form.Group> */}
+
+      <Form.Group as={Row} className="mb-3 col-lg-6">
+        <Col sm={{ span: 10, offset: 2 }}>
+          <Button type="submit">SUBMIT</Button>
+        </Col>
+      </Form.Group>
+    </Form>
+  {/* ); */}
+{/* } */}
+
+{/* export default HorizontalExample; */}
+                        {/* <h1>{logindata[0].name}</h1> */}
+                        {/* <Button onClick={userlogout}>LogOut</Button> */}
+
+                {/* {
                     logindata[0].date === todayDate ? 
                     <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
@@ -73,7 +167,7 @@ const Details = () => {
                                 </Button>
                             </Modal.Footer>
                         </Modal>:""
-                }   
+                }    */}
                      
                     </>
             }
